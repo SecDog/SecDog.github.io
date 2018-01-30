@@ -1,7 +1,9 @@
 ---
 title: Edit my blog everywhere
 date: 2018-01-29 23:34:04
-tags: [hexo],[github pages]
+tags: 
+    - hexo
+    - github pages
 ---
 
 
@@ -96,7 +98,7 @@ git push origin hexo
 ```
 
 - 8.接下来就是hexo的建站过程，写博文过程，略。
-- 9.执行hexo generate -d生成网站并部署到GitHub上。
+- 9.执行`hexo generate -d`生成网站并部署到GitHub上。
 
 
 
