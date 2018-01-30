@@ -40,7 +40,7 @@ Github其实是分的。User Pages 是用来展示用户的，而 Project Pages 
       
 - 4.在github里如图操作，将默认分支改成"hexo"，其实我觉得不改问题也不大，编辑的时候记得切换就好了。不过为了方便起见，我就改了。
 
-![][C:\Users\Administrator\Pictures\for blog\branchswtich.png]
+![如图](/Edit-my-blog-everywhere/branchswtich.jpg)
 
 
 
