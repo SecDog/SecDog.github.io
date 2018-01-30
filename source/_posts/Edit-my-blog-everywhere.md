@@ -109,6 +109,35 @@ git push origin hexo
 
 ### Fedora准备
 
+1. 安装git和nvm
+```
+sudo yum install git-core
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+nvm install stable
+```
+2. 安装hexo
+```
+npm install -g hexo-cli
+```
+
+3. git clone到本地。注意,如果是新系统先把ssh密钥到github页面注册一下。
+4. 进入刚才clone下来的文件夹
+```
+npm install hexo --save
+```
+5. 测试
+```
+hexo generate
+```
+
+
+
+如果顺利通过了话，就可以开始编写了。
+
+
+
+
+
 ----------------------------------------------------------
 ## 日常操作
 
