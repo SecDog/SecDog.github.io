@@ -1,10 +1,14 @@
 ---
-title: Fedora
+title: Fedora notes for myself
 date: 2018-01-30 20:26:06
-tags:
-- Fedora
-- Character interface
---
+tags: 
+    - Fedora
+   
+---
 
 
-`alt+ctrl+f3` can change to teminal without graphic.
+* `alt+ctrl+f3` can change to teminal without graphic. 
+
+
+
+
