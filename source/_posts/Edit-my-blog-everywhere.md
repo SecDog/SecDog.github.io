@@ -1,5 +1,5 @@
 ---
-title: Edit my blog everywhere
+title: 做一个换电脑也能编写的hexo博客
 date: 2018-01-29 23:34:04
 tags: 
     - hexo
@@ -8,7 +8,7 @@ tags:
 
 
 
-# 做一个换电脑也能编写的hexo博客
+
 
 折腾了一个新的github pages，因为日常经常换电脑，也很烦云备份，所以参考了一下[这篇文字](http://crazymilk.github.io/2015/12/28/GitHub-Pages-Hexo搭建博客/#more)进行了配置，做了一些修改。
 
@@ -45,7 +45,7 @@ Github其实是分的。User Pages 是用来展示用户的，而 Project Pages 
 
 4.在github里如图操作，将默认分支改成"hexo"，其实我觉得不改问题也不大，编辑的时候记得切换就好了。不过为了方便起见，我就改了。
 
-![如图](/Edit-my-blog-everywhere/branchswtich.jpg)
+![如图](Edit-my-blog-everywhere/branchswtich.jpg)
 
 下面跳到平台端
 
@@ -54,25 +54,28 @@ Github其实是分的。User Pages 是用来展示用户的，而 Project Pages 
 
 ### Win10
 
-1. 安装[git](https://git-scm.com),[node](http://nodejs.org/)。这里注意的是，直接去node网站下一个安装器就好了，别在命令行折腾，大坑。
+* 安装[git](https://git-scm.com),[node](http://nodejs.org/)。这里注意的是，直接去node网站下一个安装器就好了，别在命令行折腾，大坑。
 
-2. 在刚才clone下来的`你的用户名.github.io`文件夹里新建一个hexo。
+* 在刚才clone下来的`你的用户名.github.io`文件夹里新建一个hexo。
     一定要新建，否则等下'hexo init'会报错。因为目录里面有一个`.git`隐藏文件了。
     所以需要先到hexo目录下建好再拷贝出来。
 
-3. 在`你的用户名.github.io`文件夹里打开git bash
-4. 依次输入以下命令。
+* 在`你的用户名.github.io`文件夹里打开git bash
+ 
+* 依次输入以下命令。
     
 ```git
-git checkout hexo
-npm install -g hexo-cli
-hexo init hexo
-cd hexo
-npm install
+  git checkout hexo
+  npm install -g hexo-cli
+  hexo init hexo
+  cd hexo
+  npm install
 ```
 
-5. 将hexo文件夹里的所有内容拷贝到`你的用户名.github.io`里。删除`hexo`
-6. 修改`_config.yml`文件,将里面的`deploy`部分修改如下。
+* 将hexo文件夹里的所有内容拷贝到`你的用户名.github.io`里。删除`hexo`
+
+* 修改`_config.yml`文件,将里面的`deploy`部分修改如下。
+
 ```
 deploy:
   type: git
@@ -80,7 +83,7 @@ deploy:
   branch: master
 ```
 
-7. 测试,在`你的用户名.github.io`文件夹里打开git bash
+* 测试,在`你的用户名.github.io`文件夹里打开git bash
 
 ```git
  npm install hexo-deployer-git --save
@@ -91,15 +94,17 @@ deploy:
 
 然后去浏览器打开`localhost:4000`，看看是否成功。
 
-8. 推送到hexo分支
+* 推送到hexo分支
+
 ```git
 git add .
 git commit -m 'hexo init'
 git push origin hexo
 ```
 
-9.接下来就是hexo的建站过程，写博文过程，略。
-10.执行`hexo generate -d`生成网站并部署到GitHub上。
+*接下来就是hexo的建站过程，写博文过程，略。
+
+*执行`hexo generate -d`生成网站并部署到GitHub上。
 
 
 
@@ -109,23 +114,34 @@ git push origin hexo
 
 ### Fedora准备
 
-1. 安装git和nvm
+* 安装git和nvm
+
 ```
 sudo yum install git-core
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 nvm install stable
 ```
-2. 安装hexo
+
+
+*  安装hexo
 ```
 npm install -g hexo-cli
 ```
 
-3. git clone到本地。注意,如果是新系统先把ssh密钥到github页面注册一下。
-4. 进入刚才clone下来的文件夹
+
+
+*  git clone到本地。注意,如果是新系统先把ssh密钥到github页面注册一下。
+
+
+*  进入刚才clone下来的文件夹
+
 ```
 npm install hexo --save
 ```
-5. 测试
+
+
+* 测试
+
 ```
 hexo generate
 ```
@@ -143,7 +159,11 @@ hexo generate
 
 在本地对博客进行修改（添加新博文、修改样式等等）后，通过下面的流程进行管理：
 
-1.依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；
-2.然后才执行hexo generate -d发布网站到master分支上。
+* 依次执行git add .、git commit -m “…”、git push origin hexo指令将改动推送到GitHub（此时当前分支应为hexo）；
+
+
+
+
+* 然后才执行hexo generate -d发布网站到master分支上。
 
 虽然两个过程顺序调转一般不会有问题，不过逻辑上这样的顺序是绝对没问题的（例如突然死机要重装了，悲催….的情况，调转顺序就有问题了）。

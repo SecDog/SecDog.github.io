@@ -1,12 +1,12 @@
 ---
-title: 为每一个本地仓库设置独立的git config
+title: 为本地仓库分别设置独立的Git config
 date: 2018-01-30 18:10:16
 tags:
 - git
 - git config
 ---
 
-# 为每一个本地仓库设置独立的git config
+
 
 有时候不只一个github账户，gitpages上博客都好几个，为了省去切换的麻烦，我采用的方式是在每一个blog文件夹里设置。
 
