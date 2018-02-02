@@ -102,9 +102,9 @@ git commit -m 'hexo init'
 git push origin hexo
 ```
 
-*接下来就是hexo的建站过程，写博文过程，略。
+* 接下来就是hexo的建站过程，写博文过程，略。
 
-*执行`hexo generate -d`生成网站并部署到GitHub上。
+* 执行`hexo generate -d`生成网站并部署到GitHub上。
 
 
 
@@ -124,6 +124,7 @@ nvm install stable
 
 
 *  安装hexo
+
 ```
 npm install -g hexo-cli
 ```
