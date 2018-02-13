@@ -1,0 +1,29 @@
+
+Vundle在windows下安装遇到的问题
+http://blog.csdn.net/zfsword/article/details/22800271 
+
+
+比较重要的是在 Different File Names 一节中，
+cd %USERPROFILE%        这里其实打开的是C:\Documents and Settings\Administrator(这里可能不是Administrator,而是你的用户名)
+git clone https://github.com/gmarik/vundle.git vimfiles/bundle/vundle   这一步用git将vundle的所有文件都下载配置在C:\Documents and Settings\Administrator\vimfiles\bundle\vundle中了
+         但是这样不方便还是配置到vim的安装路径下比较好
+cd D:\Vim
+git clone https://github.com/gmarik/vundle.git vimfiles/bundle/vundle
+        4.接下来一步Edit The Config For Windows中，首先将quick-start 中第三步的代码粘贴到_vimrc文件中，并做如下修改
+改变
+set rtp+=~/.vim/bundle/vundle/ 
+call vundle#rc()
+
+为
+set rtp+=~/vimfiles/bundle/vundle/         这个 ~ 代表的应该就是用户目录C:\Documents and Settings\Administrator
+let path='~/vimfiles/bundle' 
+call vundle#rc(path)
+
+所以我按照这个配置弄完了之后就不成功，搜了半天才发现是路径问题，改成这样就好了
+set rtp+=$VIM/vimfiles/bundle/vundle/
+let path='$VIM/vimfiles/bundle'
+call vundle#rc(path)
+        5.下一步中提到有可能配置文件中的斜杠  / 有问题，把 vim/ 的斜杠去掉
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle 'rstacruz/sparkup', {'rtp': 'vim'} 
+注意官网的 Bundle 命令已经 变成了 Plugin
