@@ -1,0 +1,54 @@
+# config
+cover: /img/bg.jpg
+logo: /img/logo.png
+top_saying:
+- title: YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.
+- content: Coder and two dogs
+bottom_saying: 两只腿脚不好的狗砸和一个腿脚不好的程序猿。
+# Content
+excerpt_link: Read More
+
+rss: /atom.xml
+
+highlightjs: vs
+
+#Works
+#works:
+#- works_name: AAA
+#  works_url: /
+#- works_name: BBB
+#  works_url: /atom.xml
+
+#duoshuo name
+duoshuo:
+
+#disqus name
+disqus_shortname:
+
+#fancybox
+fancybox: true
+
+# Miscellaneous
+github: https://github.com/secdog
+twitter: https://twitter.com/fcukcat
+facebook: https://www.facebook.com/
+google: https://google.com/
+weibo: http://weibo.com/
+
+#about  timeline
+timeline:
+- num: 1
+  word: 2017/06/12-now
+#- num: 2
+#  word: 2014/11/29-XXX
+#- num: 3
+#  word: 2015/02/18-DDD
+#- num: 4
+#  word: More
+
+#Links
+links:
+#- name: 
+#  link: http://
+#- name: Name
+#  link: http://
