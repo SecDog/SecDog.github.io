@@ -78,7 +78,7 @@ theme: TKL
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repo: https://secdog.github.io/
+  repo: git@github.com:SecDog/Secdog/Secdog.github.io
   branch: master
 ##  message: [message]
 
