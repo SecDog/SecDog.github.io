@@ -5,33 +5,42 @@ date: 2018-03-08 03:29:11
 tags:
 ---
 
-<%- toc(page.content, {
-        class: 'post-toc',
-        list_number: true
-    }) %>
 
 
-# hexo
 
-## All about `_config.yml` 
 
-###  `could not read Username`
+
+
+### 1. _config.yml
+
+####  could not read Username
 
 **Bug:**
 
->
+```
 hexo d ：give me fatal: could not read Username for 'https://github.com': No error  
+```
 
 **Fix:**  
 
->
-gvim _config.yml
-
+{% blockquote %}
+    gvim _config.yml
+{% endblockquote %}
 
 Replace *https://github.com/YourUsrName/YourUsrName.github.io.git*   
 with *git@github.com:YourUsrName/YourUsrName.github.io.git*  
 
+***
 
-# git
+### 2. 文章详情页面的设置
 
-alias blog='git add .;git commit -m "blog update";git push origin hexo;hexo generate -d'
+#### Toc目录的添加
+
+1. 到*theme*文件夹下找到`layout/post.ejs`
+2. 在`partial('casper/post', {post: page})`里发现调用的是`casper/post`
+3. 到`layout/casper/post.ejs`里添加
+
+{% blockquote %}
+    <%- toc(page.content) %>
+{% endblockquote %}
+
